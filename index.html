@@ -3,11 +3,9 @@ layout: default
 body_class: listing
 ---
 <main>
-    <figure class="hero">
-        <img src="{{ '/assets/img/monge-escriba.jpg' | relative_url }}" width="960" height="806"
-             alt="Iluminura medieval em tons de cinza: um escriba de manto e capuz escreve num pergaminho apoiado numa estante inclinada, cercado de livros, rolos e tinteiros.">
-        <figcaption>Jean Miélot em seu scriptorium, por Jean Le Tavernier, c. 1456</figcaption>
-    </figure>
+    <img class="hero" src="{{ '/assets/img/monge-escriba.jpg' | relative_url }}" width="960" height="806"
+         alt="Iluminura medieval de um escriba escrevendo num pergaminho"
+         title="Jean Miélot em seu scriptorium, por Jean Le Tavernier, c. 1456">
 
     <h1>Blog</h1>
     {% for post in site.posts %}
