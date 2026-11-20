@@ -1,0 +1,111 @@
+/* Blog minimalista: prosa serifada, títulos e interface sem serifa. */
+
+:root {
+    --bg: #FAFAF8;
+    --text: #101010;
+    --muted: #555;
+    --line: #D8D6CF;
+    --soft: #F1F0EC;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #161615;
+        --text: #E8E6E1;
+        --muted: #9A988F;
+        --line: #33322E;
+        --soft: #22211F;
+    }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: var(--serif);
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Nome do site (no lugar de um logo) */
+.logo {
+    display: inline-block;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 { font-family: var(--sans); font-weight: 600; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+h2 { font-size: 1.4rem; line-height: 1.35; margin: 2.4rem 0 0.8rem; }
+h3 { font-size: 1.2rem; line-height: 1.4; margin: 1.8rem 0 0.6rem; }
+.listing h1 { font-size: 1.6rem; margin-bottom: 2rem; }
+
+.subtitle { font-size: 1.25rem; line-height: 1.45; color: var(--muted); margin: 0 0 0.7rem; }
+
+.date, .byline { font-family: var(--sans); font-size: 0.95rem; color: var(--muted); }
+.date { display: block; }
+.byline { margin: 0 0 2.2rem; }
+.byline .date { display: inline; }
+.byline a { color: var(--muted); }
+
+p, ul, ol { margin-bottom: 1.2rem; }
+ul, ol { padding-left: 1.5rem; }
+li { margin-bottom: 0.5rem; }
+strong { font-weight: 600; }
+
+a { color: var(--text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--muted); }
+
+/* Lista de posts */
+.post { margin-bottom: 1.8rem; }
+.post a { font-family: var(--sans); font-weight: 600; }
+.post .date { margin-top: 0.2rem; }
+
+/* Código */
+code { font-family: var(--mono); font-size: 0.9em; background: var(--soft); padding: 0.1em 0.3em; border-radius: 3px; }
+pre { overflow-x: auto; background: var(--soft); padding: 1rem; border-radius: 4px; margin: 1.2rem 0; font-size: 0.9rem; }
+pre code { background: none; padding: 0; font-size: inherit; }
+div.highlighter-rouge { margin: 1.2rem 0; }
+div.highlighter-rouge pre { margin: 0; }
+
+/* Destaque de sintaxe (classes do Rouge) */
+.highlight .c, .highlight .c1, .highlight .cm { color: #8a8a82; font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .nt { color: #b3521e; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sr { color: #4b7a3d; }
+.highlight .m, .highlight .mi, .highlight .mf { color: #a06b1f; }
+.highlight .nc, .highlight .nf, .highlight .kt { color: #2f6f9e; }
+.highlight .nb, .highlight .bp { color: #7a4fa0; }
+
+/* Citações, tabelas, imagens */
+blockquote { margin: 1.5rem 0; padding: 0.2rem 1.1rem; border-left: 3px solid var(--line); color: var(--muted); }
+article table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 1.2rem 0; display: block; overflow-x: auto; }
+article th, article td { border: 1px solid var(--line); padding: 0.65rem 0.75rem; text-align: left; vertical-align: top; }
+article th { font-family: var(--sans); font-weight: 600; background: var(--soft); }
+article img { max-width: 100%; height: auto; display: block; margin: 1.5rem 0; border-radius: 4px; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0 2rem; }
+
+footer {
+    font-family: var(--sans);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+    body { padding: 2.5rem 1.25rem; }
+    h1 { font-size: 1.6rem; }
+    .subtitle { font-size: 1.1rem; }
+}

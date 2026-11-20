@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article>
+    <h1>{{ page.title }}</h1>
+    {%- if page.subtitle %}
+    <p class="subtitle">{{ page.subtitle }}</p>
+    {%- endif %}
+    <p class="byline">Por <a href="{{ site.author_url }}" target="_blank" rel="noopener">{{ page.author | default: site.author }}</a> · {% include date.html date=page.date %}</p>
+
+    {{ content }}
+</article>

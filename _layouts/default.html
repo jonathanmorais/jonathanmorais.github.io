@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% seo %}
+    {% feed_meta %}
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body class="{{ page.body_class }}">
+    <a class="logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    {{ content }}
+
+    <footer>
+        <a href="{{ '/' | relative_url }}">Início</a>
+        {%- for link in site.footer_links %}
+        <a href="{{ link.url }}"{% unless link.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>{{ link.name }}</a>
+        {%- endfor %}
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </footer>
+</body>
+</html>

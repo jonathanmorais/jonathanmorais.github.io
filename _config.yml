@@ -1,0 +1,26 @@
+# ---- Edite aqui ----
+title: codice
+description: Escritos sobre software, ideias e o que mais aparecer.
+author: Jonathan
+author_url: https://github.com/jonathanmorais
+lang: pt-BR
+
+# Se o repositório se chamar jonathanmorais.github.io, deixe baseurl vazio.
+# Se tiver outro nome (ex.: "blog"), use baseurl: "/blog"
+url: https://jonathanmorais.github.io
+baseurl: ""
+
+# Links do rodapé
+footer_links:
+  - { name: GitHub, url: "https://github.com/jonathanmorais" }
+
+# ---- Técnico ----
+permalink: /:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude: [README.md, Gemfile, Gemfile.lock]
