@@ -67,9 +67,9 @@ a { color: var(--text); text-decoration: underline; text-decoration-thickness: 1
 a:hover { color: var(--muted); }
 
 /* Imagem da home */
-.hero { margin: 0 0 3rem; }
+.hero { margin: 0 0 2.5rem; max-width: 300px; }
 .hero img { display: block; width: 100%; height: auto; border-radius: 4px; }
-.hero figcaption { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-align: center; }
+.hero figcaption { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
 @media (prefers-color-scheme: dark) { .hero img { filter: brightness(0.85); } }
 
 /* Lista de posts */
